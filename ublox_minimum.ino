@@ -27,4 +27,8 @@ void loop() {
     Serial.print("LAT="); Serial.print(gps.location.lat(), 6);
     Serial.print("LNG="); Serial.println(gps.location.lng(), 6);
   }
+  
+  if (gps.time.isUpdated()) {
+    Serial.print("TIM="); Serial.println(gps.time.value());
+  }
 }
